@@ -14,6 +14,8 @@ def setWindow(root):
 
   root.geometry("{0}x{1}+{2}+{3}".format(w, h, x, y))
 
+  #root.iconbitmap('ПИВ-PAV.ico')
+
 root = Tk()
 setWindow(root)
 
@@ -429,6 +431,7 @@ def clickPlus(event):
         # В этом исключении выводится "Ошибка", если переменная b равна нулю
         try:
           a = float(a) / float(b)
+          a = round(a, 5)
           display.set(a)
         except ZeroDivisionError:
           display.set("Ошибка")
@@ -444,6 +447,7 @@ def clickPlus(event):
         display.set(a)
       elif c == "×":
         a = float(a) * float(b)
+        a = round(a, 5)
         display.set(a)
   b = ""
   c = "+"
@@ -474,6 +478,7 @@ def clickMinus(event):
       else:
         try:
           a = float(a) / float(b)
+          a = round(a, 5)
           display.set(a)
         except ZeroDivisionError:
           display.set("Ошибка")
@@ -489,6 +494,7 @@ def clickMinus(event):
         display.set(a)
       elif c == "×":
         a = float(a) * float(b)
+        a = round(a, 5)
         display.set(a)
   b = ""
   c = "-"
@@ -518,6 +524,7 @@ def clickMultiplication(event):
       else:
         try:
           a = float(a) / float(b)
+          a = round(a, 5)
           display.set(a)
         except ZeroDivisionError:
           display.set("Ошибка")
@@ -533,6 +540,7 @@ def clickMultiplication(event):
         display.set(a)
       elif c == "×":
         a = float(a) * float(b)
+        a = round(a, 5)
         display.set(a)
   b = ""
   c = "×"
@@ -563,6 +571,7 @@ def clickDivision(event):
       else:
         try:
           a = float(a) / float(b)
+          a = round(a, 5)
           display.set(a)
         except ZeroDivisionError:
           display.set("Ошибка")
@@ -578,6 +587,7 @@ def clickDivision(event):
         display.set(a)
       elif c == "×":
         a = float(a) * float(b)
+        a = round(a, 5)
         display.set(a)
   b = ""
   c = "÷"
